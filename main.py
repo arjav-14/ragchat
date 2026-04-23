@@ -165,6 +165,8 @@ st.markdown("""
     hr { border-color: #21262d !important; }
     .stSpinner > div { border-top-color: #58a6ff !important; }
     #MainMenu, footer { visibility: hidden; }
+    a[href*="github"] { display: none !important; }
+    [data-testid="stToolbarActions"] { display: none !important; }
 </style>
 """, unsafe_allow_html=True)
 
