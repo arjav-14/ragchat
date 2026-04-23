@@ -372,18 +372,6 @@ with st.sidebar:
     st.markdown('<div class="app-subheader">Chat with any file type</div>', unsafe_allow_html=True)
     st.markdown("---")
 
-    st.markdown("**Groq API Key**")
-    api_input = st.text_input(
-        "API Key", value=st.session_state.api_key,
-        type="password", placeholder="gsk_...",
-        label_visibility="collapsed"
-    )
-    if api_input != st.session_state.api_key:
-        st.session_state.api_key = api_input
-        st.session_state.groq_client = None
-
-    st.markdown("---")
-
     st.markdown("**Upload Files**")
     st.markdown(
         f'<div style="font-size:0.75rem;color:#8b949e;margin-bottom:6px;">Supported: {", ".join(SUPPORTED_TYPES)}</div>',
@@ -473,7 +461,7 @@ with st.sidebar:
 st.markdown("### Chat")
 
 if not st.session_state.api_key:
-    st.warning("Enter your Groq API key in the sidebar to get started.")
+    st.warning("Groq API key not found. Add GROQ_API_KEY to your .env file to get started.")
 elif st.session_state.vectorstore is None:
     st.info("Upload one or more files from the sidebar to begin chatting.")
 else:
