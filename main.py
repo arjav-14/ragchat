@@ -167,6 +167,15 @@ st.markdown("""
     #MainMenu, footer { visibility: hidden; }
     a[href*="github"] { display: none !important; }
     [data-testid="stToolbarActions"] { display: none !important; }
+    [data-testid="stHeader"] { display: none !important; }
+    [data-testid="sttoolbar"] { display: none !important; }
+    footer { visibility: hidden !important; }
+    [data-testid="stAppViewBlockContainer"] ~ div { display: none !important; }
+    .stDeployButton { display: none !important; }
+    iframe[src*="github"] { display: none !important; }
+    [class*="StatusWidget"] { display: none !important; }
+    [class*="toolbarActions"] { display: none !important; }
+    [data-testid="manage-app-button"] { display: none !important; }
 </style>
 """, unsafe_allow_html=True)
 
