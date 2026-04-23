@@ -1,0 +1,17 @@
+langchain
+langchain-community
+langchain-huggingface
+langchain-text-splitters
+faiss-cpu
+sentence-transformers
+groq
+streamlit
+pypdf
+python-dotenv
+torch
+docx2txt
+unstructured[xlsx,pptx]
+openpyxl
+python-pptx
+pandas
+ 
